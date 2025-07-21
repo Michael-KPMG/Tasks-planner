@@ -1,0 +1,19 @@
+// =============================================================================
+// TODO LIST - MAIN STYLESHEET
+// Modern 7-1 Architecture with @use/@forward
+// =============================================================================
+
+// 1. GLOBAL ABSTRACTS
+@use '../../../global_styles/abstracts' as *;
+
+// 2. COMPONENT ABSTRACTS
+@use 'abstracts/index' as *;
+
+// 3. LAYOUT
+@use 'layout';
+
+// 4. COMPONENTS
+@use 'components';
+
+// 5. PAGES (Responsive)
+@use 'pages';

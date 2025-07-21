@@ -1,0 +1,142 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Production builds
+dist/
+build/
+dist-ssr/
+.vite/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.local
+
+# IDE and Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE_BIN/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Coverage and testing
+coverage/
+*.lcov
+.nyc_output/
+
+# ESLint and Stylelint cache
+.eslintcache
+.stylelintcache
+
+# Optional npm cache directory
+.npm
+
+# Compiled CSS files (keep SCSS source files)
+*.css.map
+src/**/*.css
+!src/index.css
+
+# Compiled JavaScript maps
+*.js.map
+
+# Temporary folders
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# Database files (for local development)
+*.db
+*.sqlite
+*.sqlite3
+db.json.backup
+
+# Security files
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Editor specific files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Package managers (choose one to keep)
+# Uncomment the one you DON'T use:
+# package-lock.json
+# yarn.lock
+
+# Local configuration files
+config/local.js
+config/local.json
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock

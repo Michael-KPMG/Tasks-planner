@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": "decb",
+      "text": "Buy Milk and Tea",
+      "status": "Not Completed"
+    },
+    {
+      "id": "27e9",
+      "text": "Buy Carrots",
+      "status": "Not Completed"
+    },
+    {
+      "id": "ee33",
+      "text": "Learn useState()",
+      "status": "Not Completed"
+    },
+    {
+      "id": "beb3",
+      "text": "Learn useEffects()",
+      "status": "Not Completed"
+    },
+    {
+      "id": "6eef",
+      "text": "Go to Gym",
+      "status": "Not Completed"
+    },
+    {
+      "id": "554a",
+      "text": "Call Michael",
+      "status": "Not Completed"
+    },
+    {
+      "id": "287e",
+      "text": "Call Mom",
+      "status": "Not Completed"
+    },
+    {
+      "id": "f46e",
+      "text": "Buy pen",
+      "status": "Not Completed"
+    },
+    {
+      "id": "23eb",
+      "text": "Buy Paper",
+      "status": "Not Completed"
+    },
+    {
+      "id": "a1bb",
+      "text": "Read the novel",
+      "status": "Not Completed"
+    }
+  ]
+}
