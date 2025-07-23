@@ -1,0 +1,24 @@
+// LoadingSpinner styles
+@use '../../global_styles/abstracts' as *;
+
+.todo-list-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, lighten($indigo-blue, 20%) 0%, darken($indigo-blue, 10%) 100%);
+  font-family: $font-family;
+  @include flex-center();
+  
+  .todo-list {
+    text-align: center;
+    
+    &__title {
+      color: $light-color;
+      font-size: $font-size-xxl;
+      font-weight: 700;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba($dark-color, 0.3);
+      font-family: $font-family;
+      letter-spacing: 0.05em;
+      animation: paperLift 2s ease-in-out infinite;
+    }
+  }
+}

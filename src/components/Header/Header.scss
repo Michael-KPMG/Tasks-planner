@@ -1,0 +1,45 @@
+// Header styles  
+@use '../../global_styles/abstracts' as *;
+
+.dashboard-header {
+  grid-area: header;
+  @include card-style($spacing-lg, $box-shadow-md);
+  @include flex-between();
+  background: rgba($bg-primary, 0.95);
+  border-left: 4px solid $primary-color;
+  min-height: 80px;
+  backdrop-filter: blur(10px);
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: $spacing-md;
+    min-height: auto;
+    padding: $spacing-md;
+  }
+
+  .todo-list__title {
+    color: $indigo-blue;
+    font-size: $font-size-xxl;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba($dark-color, 0.1);
+    font-family: $font-family;
+    letter-spacing: 0.05em;
+    position: relative;
+    flex-shrink: 0;
+    
+    // Origami paper fold hover effect
+    &:hover {
+      animation: paperFold 0.6s ease-out;
+      transform: scale(1.02);
+      transition: transform $transition-fast;
+    }
+    
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-bottom: $spacing-md;
+      font-size: $font-size-xl;
+    }
+  }
+}

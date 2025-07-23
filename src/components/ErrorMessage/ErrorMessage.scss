@@ -1,0 +1,26 @@
+// ErrorMessage styles
+@use '../../global_styles/abstracts' as *;
+
+.todo-list-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, lighten($indigo-blue, 20%) 0%, darken($indigo-blue, 10%) 100%);
+  font-family: $font-family;
+  @include flex-center();
+  
+  .todo-list {
+    @include card-style($spacing-xxl, $box-shadow-lg);
+    text-align: center;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    
+    &__title {
+      color: $indigo-blue;
+      font-size: $font-size-xxl;
+      font-weight: 700;
+      margin: 0 0 $spacing-lg 0;
+      text-shadow: 0 2px 4px rgba($dark-color, 0.1);
+      font-family: $font-family;
+      letter-spacing: 0.05em;
+    }
+  }
+}

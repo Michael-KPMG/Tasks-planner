@@ -1,28 +1,39 @@
-// =============================================================================
-// TODO LIST - COMPONENTS - STATS
-// Statistics display component
-// All abstracts (global + component) are available via main.scss
-// =============================================================================
+// Sidebar styles
+@use '../../global_styles/abstracts' as *;
 
-@use '../abstracts' as *;
-
-// Dashboard Sidebar Stats
 .dashboard-sidebar {
+  grid-area: sidebar;
+  @include card-style($spacing-lg, $box-shadow-md);
+  background: rgba($washi-cream, 0.95);
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+  
+  @media (max-width: 768px) {
+    padding: $spacing-md;
+    display: flex;
+    gap: $spacing-md;
+    overflow-x: auto;
+    overflow-y: visible;
+    
+    .stat {
+      min-width: 150px;
+      margin-bottom: 0;
+    }
+  }
+
   .stat {
     @include card-style($spacing-lg, $box-shadow-sm);
     margin-bottom: $spacing-md;
     text-align: center;
-    border-radius: $border-radius-lg;
     background: $bg-primary;
-    border: 1px solid $border-color;
-    padding: $spacing-lg;
     transition: all $transition-normal;
     
-    // Hover effect
+    // Hover effect with origami-inspired lift
     &:hover {
       transform: translateY(-2px);
       box-shadow: $box-shadow-md;
       border-color: $primary-color;
+      animation: paperLift 0.3s ease-out;
     }
     
     &__label {
@@ -32,44 +43,44 @@
       font-weight: 600;
       margin-bottom: $spacing-sm;
       text-transform: uppercase;
-      letter-spacing: $todo-stat-letter-spacing;
+      letter-spacing: 0.05em;
       font-family: $font-family;
       line-height: 1.2;
     }
     
     &__value {
       display: block;
-      font-size: 2.5rem;
+      font-size: $font-size-xxl;
       font-weight: 800;
       color: $dark-color;
       font-family: $font-family;
       line-height: 1;
       
       &--not-completed {
-        color: $todo-status-not-completed;
-        text-shadow: 0 0 8px rgba($todo-status-not-completed, 0.2);
+        color: $not-completed-color;
+        text-shadow: 0 0 8px rgba($not-completed-color, 0.2);
       }
       
       &--in-progress {
-        color: $todo-status-in-progress;
-        text-shadow: 0 0 8px rgba($todo-status-in-progress, 0.2);
+        color: $in-progress-color;
+        text-shadow: 0 0 8px rgba($in-progress-color, 0.2);
       }
       
       &--completed {
-        color: $todo-status-completed;
-        text-shadow: 0 0 8px rgba($todo-status-completed, 0.2);
+        color: $completed-color;
+        text-shadow: 0 0 8px rgba($completed-color, 0.2);
       }
     }
   }
   
-  @include todo-mobile {
+  @media (max-width: 768px) {
     .stat {
       margin-bottom: 0;
       padding: $spacing-md;
       text-align: center;
       
       &__value {
-        font-size: 1.8rem;
+        font-size: $font-size-xl;
       }
     }
   }

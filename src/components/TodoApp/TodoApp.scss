@@ -1,0 +1,27 @@
+// TodoApp styles - Main container for the entire app
+@use '../../global_styles/abstracts' as *;
+
+.todo-app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, lighten($indigo-blue, 20%) 0%, darken($indigo-blue, 10%) 100%);
+  font-family: $font-family;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
+  gap: $spacing-md;
+  padding: $spacing-md;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content";
+    padding: $spacing-sm;
+    gap: $spacing-sm;
+  }
+}

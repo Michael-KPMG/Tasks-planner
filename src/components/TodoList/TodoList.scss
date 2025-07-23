@@ -1,6 +1,44 @@
-// =============================================================================
-// TODO LIST COMPONENT - MAIN STYLES
-// Using modern 7-1 SCSS architecture
-// =============================================================================
+// TodoList component styles
+@use '../../global_styles/abstracts' as *;
 
-@use 'styles/main' as *;
+// Main Content Area
+.todo-content {
+  grid-area: content;
+  padding: $spacing-lg;
+  overflow-y: auto;
+  background: rgba($bg-primary, 0.05);
+  border-radius: $border-radius-lg;
+  backdrop-filter: blur(5px);
+  
+  @media (max-width: 768px) {
+    padding: $spacing-md;
+  }
+}
+
+.todo-list__items {
+  @include flex-center(column);
+  gap: $spacing-md;
+  position: relative;
+  min-height: 200px;
+  align-items: stretch;
+}
+
+.todo-list__empty {
+  @include flex-center();
+  @include card-style($spacing-xxl, $box-shadow-sm);
+  margin: $spacing-xl auto;
+  color: $secondary-color;
+  font-size: $font-size-lg;
+  font-family: $font-family;
+  font-weight: 500;
+  text-align: center;
+  border: 2px dashed $border-color;
+  background: rgba($bg-secondary, 0.8);
+  max-width: 400px;
+  
+  p {
+    margin: 0;
+    opacity: 0.8;
+    animation: paperLift 3s ease-in-out infinite;
+  }
+}

@@ -1,9 +1,3 @@
-// =============================================================================
-// GLOBAL ABSTRACTS - VARIABLES
-// Common variables used across all components
-// =============================================================================
-
-// Japanese Origami Colors
 $primary-color: #d32f2f !default; // Traditional Red (Aka)
 $secondary-color: #424242 !default; // Charcoal Gray (Sumi)
 $success-color: #388e3c !default; // Bamboo Green (Midori)
@@ -13,7 +7,6 @@ $info-color: #1976d2 !default; // Indigo Blue (Ai)
 $light-color: #fafafa !default; // Paper White
 $dark-color: #212121 !default; // Ink Black
 
-// Traditional Japanese Colors
 $sakura-pink: #ffb3d9 !default; // Cherry Blossom Pink
 $washi-cream: #f8f6f0 !default; // Washi Paper Cream
 $bamboo-green: #7cb342 !default; // Bamboo Green
@@ -35,7 +28,7 @@ $border-color: #e0e0e0 !default; // Light Paper Edge
 $border-color-dark: #424242 !default; // Charcoal
 
 // Typography - Japanese Minimalist Style
-$font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Segoe UI', sans-serif !default;
+$font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", "Segoe UI", sans-serif !default;
 $font-size-base: 16px !default;
 $font-size-sm: 14px !default;
 $font-size-lg: 18px !default;
@@ -56,10 +49,14 @@ $border-radius-md: 4px !default;
 $border-radius-lg: 6px !default;
 
 // Paper Shadow Effects - Origami depth
-$paper-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08) !default;
-$paper-shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.12) !default;
-$paper-shadow-heavy: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.15) !default;
-$origami-fold-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 1px 3px rgba(0, 0, 0, 0.1) !default;
+$paper-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12),
+  0 1px 2px rgba(0, 0, 0, 0.08) !default;
+$paper-shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.16),
+  0 3px 6px rgba(0, 0, 0, 0.12) !default;
+$paper-shadow-heavy: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.15) !default;
+$origami-fold-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+  0 1px 3px rgba(0, 0, 0, 0.1) !default;
 
 // Box Shadow - Paper-like shadows
 $box-shadow-sm: $paper-shadow-light !default;
@@ -72,5 +69,10 @@ $transition-normal: 0.3s ease-out !default;
 $transition-slow: 0.5s ease-out !default;
 
 // Origami Specific Effects
-$fold-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.05) 100%) !default;
-$paper-texture: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9InJnYmEoMCwwLDAsMC4wMykiPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjEiLz48L2c+PC9nPjwvc3ZnPg==') !default;
+$fold-gradient: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.1) 0%,
+  rgba(255, 255, 255, 0) 50%,
+  rgba(0, 0, 0, 0.05) 100%
+) !default;
+$paper-texture: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9InJnYmEoMCwwLDAsMC4wMykiPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjEiLz48L2c+PC9nPjwvc3ZnPg==") !default;

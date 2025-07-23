@@ -1,0 +1,38 @@
+// AddTodo styles
+@use '../../global_styles/abstracts' as *;
+
+.todo-list__add-section {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  flex: 1;
+  max-width: 400px;
+  
+  @media (max-width: 768px) {
+    max-width: none;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+}
+
+.todo-list__input {
+  @include input-style;
+  flex: 1;
+  height: 48px;
+  border-radius: $border-radius-md;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.todo-list__add-btn {
+  @include button-style($primary-color);
+  height: 48px;
+  white-space: nowrap;
+  border-radius: $border-radius-md;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

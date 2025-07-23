@@ -1,35 +1,22 @@
-// =============================================================================
-// TODO LIST - COMPONENTS - TODO ITEM
-// Individual todo item component
-// All abstracts (global + component) are available via main.scss
-// =============================================================================
-
-@use '../abstracts' as *;
+// TodoItem styles
+@use '../../global_styles/abstracts' as *;
 
 .todo-item {
   @include card-style($spacing-lg, $box-shadow-md);
   border-left: 4px solid $primary-color;
   transition: all $transition-normal;
-  @include todo-item-hover;
   position: relative;
   min-height: 80px;
   margin-bottom: $spacing-md;
   display: flex;
   align-items: stretch;
-  background: $bg-primary;
-  border-radius: $border-radius-lg;
-  padding: $spacing-md $spacing-lg;
+  background: rgba($bg-primary, 0.95);
+  backdrop-filter: blur(10px);
   
-  // Origami fold corner effect
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 16px;
-    height: 16px;
-    background: linear-gradient(-45deg, transparent 46%, rgba(0, 0, 0, 0.1) 50%, transparent 54%);
-    border-top-right-radius: $border-radius-lg;
+  &:hover {
+    transform: translateY(-2px) rotate(0.2deg);
+    box-shadow: $box-shadow-lg;
+    animation: paperLift 0.3s ease-out;
   }
 
   &__content {
@@ -39,7 +26,7 @@
     flex: 1;
     min-height: 48px;
     
-    @include todo-mobile {
+    @media (max-width: 768px) {
       flex-direction: column;
       align-items: stretch;
       gap: $spacing-md;
@@ -63,7 +50,6 @@
   &__edit-input {
     @include input-style;
     flex: 2;
-    font-size: $font-size-base;
     height: 40px;
     border-radius: $border-radius-sm;
   }
@@ -73,7 +59,7 @@
     width: 220px;
     margin-right: $spacing-lg;
     
-    @include todo-mobile {
+    @media (max-width: 768px) {
       width: 100%;
       margin-right: 0;
       margin-bottom: $spacing-sm;
@@ -84,13 +70,11 @@
     @include input-style;
     width: 100%;
     height: 40px;
-    font-size: 12px;
+    font-size: $font-size-sm;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1px;
     cursor: pointer;
-    border-radius: $border-radius-sm;
-    padding: $spacing-sm $spacing-sm;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -101,18 +85,24 @@
     padding-right: 30px;
     
     &.status-not-completed {
-      @include todo-status-colors($todo-status-not-completed);
-      border-color: $todo-status-not-completed;
+      @include status-badge($not-completed-color, $light-color);
+      background: rgba($not-completed-color, 0.1);
+      border-color: $not-completed-color;
+      color: darken($not-completed-color, 10%);
     }
     
     &.status-in-progress {
-      @include todo-status-colors-dark($todo-status-in-progress, 20%);
-      border-color: $todo-status-in-progress;
+      @include status-badge($in-progress-color, $light-color);
+      background: rgba($in-progress-color, 0.1);
+      border-color: $in-progress-color;
+      color: darken($in-progress-color, 10%);
     }
     
     &.status-completed {
-      @include todo-status-colors($todo-status-completed);
-      border-color: $todo-status-completed;
+      @include status-badge($completed-color, $light-color);
+      background: rgba($completed-color, 0.1);
+      border-color: $completed-color;
+      color: darken($completed-color, 10%);
     }
   }
 
@@ -122,7 +112,7 @@
     gap: $spacing-sm;
     flex-shrink: 0;
     
-    @include todo-mobile {
+    @media (max-width: 768px) {
       justify-content: stretch;
       gap: $spacing-xs;
       
@@ -133,28 +123,22 @@
   }
 
   &__btn {
-    @include todo-btn-base;
+    font-size: $font-size-sm;
     
     &--edit {
-      @include todo-btn-edit;
+      @include button-style($info-color);
     }
     
     &--delete {
-      @include todo-btn-delete;
+      @include button-style($danger-color);
     }
     
     &--save {
-      @include todo-btn-save;
+      @include button-style($success-color);
     }
     
     &--cancel {
-      @include todo-btn-cancel;
+      @include button-style($secondary-color);
     }
   }
-}
-
-// Data stream animation
-@keyframes dataStream {
-  0% { right: -100%; }
-  100% { right: 100%; }
 }

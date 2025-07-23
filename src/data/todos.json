@@ -3,12 +3,12 @@
     {
       "id": "decb",
       "text": "Buy Milk and chips",
-      "status": "Not Completed"
+      "status": "Completed"
     },
     {
       "id": "27e9",
       "text": "Buy Carrots",
-      "status": "Not Completed"
+      "status": "In-Progress"
     },
     {
       "id": "ee33",
